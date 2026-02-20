@@ -150,15 +150,15 @@ function App() {
         <div className="p-6 border-b border-slate-800">
           <h1 className="text-2xl font-bold flex items-center gap-2">
             <Activity className="text-blue-400" />
-            HR Sim <span className="text-xs bg-blue-600 px-1 rounded">PRO</span>
+            HR Sim
           </h1>
         </div>
         <nav className="flex-1 p-4 space-y-2">
           <NavItem icon={<Users />} label="Dashboard Overview" active={activeTab === 'dashboard'} onClick={() => setActiveTab('dashboard')} />
           <NavItem icon={<AlertTriangle />} label="Risk Analysis" active={activeTab === 'simulation'} onClick={() => setActiveTab('simulation')} />
         </nav>
-        <div className="p-4 border-t border-slate-800 text-slate-400 text-sm">
-          Aditi Ahuja © 2026
+        <div className="p-4 border-t border-slate-800 text-slate-400 text-xs">
+          Predictive Analytics Engine
         </div>
       </aside>
 
@@ -199,8 +199,8 @@ function App() {
 
           <div className="flex items-center gap-4">
             <div className="text-right hidden sm:block">
-              <p className="text-xs text-gray-400 font-semibold uppercase">Admin User</p>
-              <p className="text-sm font-bold text-gray-700">Aditi Ahuja</p>
+              <p className="text-xs text-blue-600 font-bold uppercase tracking-widest">Active Session</p>
+              <p className="text-sm font-bold text-gray-700">HR Manager</p>
             </div>
             <div className="w-10 h-10 bg-gradient-to-tr from-blue-600 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg shadow-blue-200">AA</div>
           </div>
