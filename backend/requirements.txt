@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+faker
+pandas
+sqlalchemy
+scikit-learn
+joblib
+python-multipart
