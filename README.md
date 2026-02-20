@@ -1,6 +1,8 @@
 # HR Attri-Sim: Predictive Decision Support System
 
-A HR analytics platform that predicts employee attrition risk **before** it happens. It combines a policy-driven **Rule Engine** with a **Machine Learning (Random Forest)** model to deliver real-time risk assessments, financial impact analysis, and interactive policy simulation.
+A proactive HR analytics platform that predicts employee attrition risk before it happens — combining a policy-driven Rule Engine with a Machine Learning (Random Forest) model for real-time risk assessment, financial impact analysis, and interactive policy simulation.
+
+🔗 **Live Demo:** Coming Soon
 
 ---
 
@@ -8,20 +10,20 @@ A HR analytics platform that predicts employee attrition risk **before** it happ
 
 | Layer | Technologies |
 | :--- | :--- |
-| **Frontend** | React.js (Vite), Tailwind CSS, Recharts, Lucide Icons |
-| **Backend** | Python 3.13+, FastAPI, SQLAlchemy (ORM) |
+| **Frontend** | React.js, Tailwind CSS |
+| **Backend** | Python, FastAPI |
 | **AI / ML** | Scikit-Learn (Random Forest), Pandas, Joblib |
-| **Database** | SQLite (Persistent Storage) |
+| **Database** | SQLite |
 
 ---
 
 ## ⚙️ Core Features
 
-- **Policy Risk Engine** — 5 HR algorithms (Bradford Factor, Compa-Ratio, Burnout, Ghosting Risk, Risk Stratification) calculate a Policy Risk Score (0–100)
-- **ML Attrition Risk** — Random Forest Classifier predicts attrition probability based on employee data patterns
-- **Financial Impact** — Calculates estimated replacement cost per at-risk employee
-- **Interactive Simulator** — Adjust policy parameters via sliders and see real-time impact on team stability
-- **Data Persistence** — Employee data stored in SQLite, fetched on every restart without regeneration
+- **Policy Risk Engine** — 5 HR algorithms (Bradford Factor, Compa-Ratio, Burnout Analysis, Ghosting Risk, Risk Stratification) calculate a Policy Risk Score (0–100).
+- **ML Attrition Risk** — Random Forest Classifier predicts attrition probability based on employee data patterns, independent of policy settings.
+- **Financial Impact Analyzer** — Translates risk into money using industry standard 20% replacement cost formula.
+- **Interactive Policy Simulator** — Adjust sliders and see real-time impact on team stability.
+- **Data Persistence** — SQLite stores employee data on first run, fetched on every restart without regeneration.
 
 ---
 
@@ -63,7 +65,12 @@ A HR analytics platform that predicts employee attrition risk **before** it happ
 Open `http://localhost:5173` in your browser.
 
 > [!NOTE]  
-> **Data Note:** `hr_data.db` and `attrition_model.joblib` are auto-generated on the first run.
+> **Data Note:** `hr_data.db` and `attrition_model.joblib` are auto-generated on the first run — do not manually create them.
+
+---
+
+## 🧠 Algorithm & ML Logic
+For a detailed breakdown of all 5 algorithms and the Random Forest model, see [LOGIC.md](./LOGIC.md).
 
 ---
 
