@@ -23,7 +23,6 @@ class RiskEngine:
         # --- RULE 1: Absenteeism (Weighted Score: 30) ---
         bradford = RiskEngine.calculate_bradford_score(emp['absence_spells'], emp['total_absent_days'])
         if bradford > params['bradford_trigger']:
-            severity = 100 if bradford > (params['bradford_trigger'] * 2) else 50
             total_risk_score += 30
             risks.append(f"Absenteeism (BF Score: {bradford})")
 

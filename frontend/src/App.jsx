@@ -49,7 +49,7 @@ function App() {
   }, [bradfordTrigger, marketRatio, burnoutHours, noticeLimit, activeTab])
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/employees')
+    fetch(`${import.meta.env.VITE_API_URL}/api/employees`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to connect to Backend")
         return res.json()
@@ -60,7 +60,7 @@ function App() {
       })
       .catch(err => {
         console.error(err)
-        setError("Error: Is your Python Server running? (Run 'run_backend.bat'!)")
+        setError("Backend server is not running. Please try again later.")
         setLoading(false)
       })
   }, [])
@@ -85,7 +85,7 @@ function App() {
     setActiveTab('simulation')
     setSimLoading(true)
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/simulate', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -149,8 +149,7 @@ function App() {
       <aside className="w-64 bg-slate-900 text-white flex flex-col hidden md:flex transition-all duration-300">
         <div className="p-6 border-b border-slate-800">
           <h1 className="text-2xl font-bold flex items-center gap-2">
-            <Activity className="text-blue-400" />
-            HR Sim
+            HR Attri-Sim
           </h1>
         </div>
         <nav className="flex-1 p-4 space-y-2">
@@ -263,7 +262,6 @@ function App() {
 
               {/* SIMULATION CTA */}
               <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 rounded-xl shadow-lg flex flex-col justify-center items-center text-center">
-                <Zap className="w-12 h-12 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">Risk Simulation Engine</h3>
                 <p className="text-slate-300 mb-6 text-sm">Model policy changes for {selectedDept} employees.</p>
                 <button onClick={() => setActiveTab('simulation')} className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-bold transition-all w-full shadow-lg shadow-blue-900/50">
@@ -280,7 +278,6 @@ function App() {
               {/* CONTROLS */}
               <div className="lg:col-span-1 bg-white p-6 rounded-xl shadow-md border border-gray-200 h-fit sticky top-24">
                 <h3 className="text-lg font-bold mb-6 text-gray-800 flex items-center gap-2">
-                  <Zap className="text-yellow-500 w-5 h-5 fill-current" />
                   Simulation Parameters
                 </h3>
                 <div className="space-y-6">
@@ -478,7 +475,7 @@ function SliderControl({ label, value, setter, min, max, step, helper }) {
       />
       {helper && (
         <p className="text-[10px] text-gray-400 mt-1.5 italic group-hover:text-gray-600 transition-colors">
-          💡 {helper}
+          {helper}
         </p>
       )}
     </div>
