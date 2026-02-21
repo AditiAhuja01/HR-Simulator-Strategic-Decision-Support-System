@@ -2,7 +2,7 @@
 
 A proactive HR analytics platform that predicts employee attrition risk before it happens by combining a policy-driven Rule Engine with a Machine Learning (Random Forest) model for real-time risk assessment, financial impact analysis, and interactive policy simulation.
 
-Live Demo: Coming Soon
+Project Access: [Explore the Interactive System](https://hr-simulator-strategic-decision-sup.vercel.app)
 
 ---
 
@@ -27,29 +27,11 @@ Live Demo: Coming Soon
 
 ---
 
-## Getting Started
+## API Access
 
-Note: First load may take 30-60 seconds as the server initializes data on Render's free tier.
-
-### Backend
-```bash
-cd backend
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open http://localhost:5173 in your browser.
-
-Note: hr_data.db and attrition_model.joblib are auto-generated on the first run.
+The backend is hosted on Render and can be accessed via the following endpoints:
+- **Base URL:** `https://hr-simulator-strategic-decision-support.onrender.com`
+- **Documentation:** `https://hr-simulator-strategic-decision-support.onrender.com/docs`
 
 ---
 
