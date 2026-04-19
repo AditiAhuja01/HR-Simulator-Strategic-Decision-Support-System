@@ -1,6 +1,6 @@
-#HRLens — Employee Risk Analytics & Policy Assistant
+# **HRLens- Employee Risk Analytics & Policy Assistant**
 
-A proactive HR analytics platform that predicts employee attrition risk before it happens by combining a policy-driven Rule Engine with a Machine Learning (Random Forest) model for real-time risk assessment, financial impact analysis, and interactive policy simulation.
+A proactive HR analytics platform that predicts employee attrition risk before it happens by combining a policy-driven Rule Engine for real-time risk assessment, financial impact analysis, and interactive policy simulation.
 
 Project Access: [Explore the Interactive System](https://hr-simulator-strategic-decision-sup.vercel.app)
 
